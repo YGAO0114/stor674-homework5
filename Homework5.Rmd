@@ -424,6 +424,9 @@ docker push ygaooo0114/compute-bench:latest
 ```
 # Format: username/imagename:tag
 ygaooo0114/compute-bench:latest
+# full link:
+https://hub.docker.com/r/ygaooo0114/compute-bench
+
 
 
 # output:
@@ -702,6 +705,12 @@ JobID           JobName  Partition      State ExitCode    Elapsed    ReqTRES
 21994427.ba+      batch             COMPLETED      0:0   00:00:11            
 21994427.ex+     extern             COMPLETED      0:0   00:00:11     
 ```
+
+![squeue -u $USER](/Users/yuangao/Desktop/STOR674/squeue.png)
+
+
+
+![sacct](/Users/yuangao/Desktop/STOR674/sc.png)
 
 ---
 
