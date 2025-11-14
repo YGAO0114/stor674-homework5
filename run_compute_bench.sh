@@ -8,8 +8,8 @@
 #SBATCH --output=compute_bench_%j.out
 #SBATCH --error=compute_bench_%j.err
 
-# Load Singularity module if needed
-module load singularity
+# Load Apptainer module if needed
+module load apptainer
 
 # Print job information
 echo "Job started on $(date)"
@@ -20,8 +20,7 @@ echo "Job ID: ${SLURM_JOB_ID}"
 nvidia-smi
 
 # Run the containerized compute benchmark with GPU support
-singularity exec --nv pytorch-cuda.sif python compute_bench.py
+apptainer run --nv compute-bench_latest.sif
 
 # Print completion time
 echo "Job completed on $(date)"
-
